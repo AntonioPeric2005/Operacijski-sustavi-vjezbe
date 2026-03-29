@@ -1,1 +1,107 @@
- 
+ZADATAK 1
+
+Izvršene naredbe:
+git clone https://github.com/AntonioPeric2005/Operacijski-sustavi-vjezbe.git
+cd Operacijski-sustavi-vjezbe
+mkdir vjezba_2
+cd vjezba_2
+echo. > vjezba_2.txt
+
+Objašnjenje:
+Kloniran je repozitorij, napravljen direktorij vjezba_2 i stvorena datoteka vjezba_2.txt.
+
+
+ZADATAK 2
+
+Izvršene naredbe:
+mkdir data
+mkdir backup
+touch script.js
+touch style.css
+touch .env
+echo console.log("Hello, World!") > data/script.js
+echo body { background-color: #f0f0f0; } > data/style.css
+echo VJEZBE=OS > data/.env
+type data/script.js
+type data/style.css
+type data/.env
+
+Sadržaj datoteka:
+script.js
+console.log("Hello, World!")
+
+style.css
+body { background-color: #f0f0f0; }
+
+.env
+VJEZBE=OS
+
+Objašnjenje:
+Stvoreni su direktoriji data i backup. U direktoriju data stvorene su datoteke script.js, style.css i .env te je njihov sadržaj provjeren naredbom cat.
+
+
+ZADATAK 3
+
+Izvršene naredbe:
+cp data/script.js backup/
+cp data/style.css backup/
+cp data/.env backup/
+ls -la backup
+cd data
+ls -laS ../backup
+cd ..
+
+Objašnjenje:
+Sav sadržaj direktorija data, uključujući skrivene datoteke, kopiran je u direktorij backup. Nakon toga je ispisan detaljan sadržaj direktorija backup, uključujući skrivene datoteke, sortiran po veličini od najveće prema najmanjoj.
+
+
+ZADATAK 4
+
+Izvršene naredbe:
+cd data
+rm -i script.js style.css
+cp -rn ../backup/. .
+ls -ltA
+dir /a
+cd ..
+
+Objašnjenje:
+Datoteke script.js i style.css su interaktivno obrisane, dok je .env ostao. Nakon toga je sadržaj direktorija backup kopiran natrag u data bez prepisivanja postojećih datoteka. Sadržaj direktorija data ispisan je tako da uključuje skrivene datoteke, ne uključuje . i .. te je sortiran po datumu zadnje izmjene od najnovije prema najstarijoj datoteci.
+
+Dodatna naredba za ispis sadržaja direktorija data:
+dir /a
+
+Primjer rezultata:
+.env
+script.js
+style.css
+
+
+ZADATAK 5
+
+Odabrani direktorij:
+D:\Cmder\Operacijski-sustavi-vjezbe\vjezba_2
+
+Izvršene naredbe:
+ls -laS
+ls -lhS
+tree /f
+
+Objašnjenje:
+ls -laS prikazuje detaljan sadržaj glavnog direktorija, uključujući skrivene datoteke, sortiran po veličini od najveće prema najmanjoj.
+ls -lhS prikazuje detaljan sadržaj glavnog direktorija bez skrivenih datoteka, sortiran po veličini i s jedinicama uz veličinu.
+tree /f prikazuje sadržaj direktorija i poddirektorija u obliku stabla zajedno s datotekama.
+
+Primjer rezultata naredbe tree /f:
+D:.
+│   vjezba_2.txt
+│
+├───backup
+│       .env
+│       script.js
+│       style.css
+│
+└───data
+        .env
+        script.js
+        style.css 
