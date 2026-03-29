@@ -1,0 +1,48 @@
+   10  git clone https://github.com/AntonioPeric2005/Operacijski-sustavi-vjezbe.git
+   11  cd Operacijski-sustavi-vjezbe
+   12  mkdir vjezba_2
+   13  echo. > vjezba_2.txt
+   14  dir
+   15  git config --global user.name "Antonio Peric"
+   16  git config --global user.email "aperic2@student.unipu.hr"
+   17  git commit -m "Riješen zadatak 1"
+   18  mkdir data
+   19  mkdir backup
+   20  touch script.js
+   21  touch style.css
+   22  touch .env
+   23  echo console.log("Hello, World!") > script.js
+   24  echo body { background-color: #f0f0f0; } > style.css
+   25  echo VJEZBE=OS > .env
+   26  type script.js
+   27  type style.css
+   28  type .env
+   29  git commit -m "Riješen zadatak 2"
+   30  dir data
+   31  cd vjezba_2
+   32  cp data/script.js backup/
+   33  cp data/style.css backup/
+   34  cp data/.env backup/
+   35  ls -la backup
+   36  ls -laS ../backup
+   37  git commit -m "Riješen zadatak 3"
+   38  cd data
+   39  rm -i script.js style.css
+   40  cp -rn ../backup/. .
+   41  ls -la
+   42  ls -ltA
+   43  dir /a
+   44  cd ..
+   45  git add .
+   46  git commit -m "Riješen zadatak 4"
+   47  ls -laS
+   48  ls -lhS
+   49  tree -a
+   50  tree /f
+   51  ls
+   52  git log --oneline
+   53  notepad vjezba_2.txt
+   54  git add . 
+   55  git commit -m "Završena vjezba 2"
+   56  git push
+   57  git status
